@@ -4,7 +4,6 @@ const getMissingAlphabetChars = (value) => {
     .map((x) => String.fromCharCode(x));
 
   const dict = [...value.matchAll(/[a-zA-Z]/g)]
-    .sort()
     .reduce(
       (acc, letter) => acc.set(letter[0], (acc.get(letter[0]) || 0) + 1),
       new Map()
