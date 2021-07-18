@@ -12,7 +12,7 @@ const getMissingAlphabetChars = (value) => {
   let alphabets = [];
 
   for (let i = 0; i < Math.max(...dict.values()); i++) {
-    alphabets = alphabets.concat(alphabet);
+    alphabets = [].concat(alphabet);
   }
 
   alphabets.sort();
